@@ -18,10 +18,8 @@ let score = localStorage.getItem("score") ? JSON.parse(localStorage.getItem("sco
 scoreElement.innerText = `Score: ${score}`;
 
 if (opStr[operator] === "/") {
-    if (num2 > num1) {
-        num1 = (operator + 1) * num2;
-        // just making it multiple of num1
-    }
+    num1 = (operator + num1) * num2;
+    // just making it multiple of num1
 }
 else if (opStr[operator] === "-") {
     if (num1 < num2) {
